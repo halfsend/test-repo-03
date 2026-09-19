@@ -12,11 +12,6 @@ roles:
     - fix
     - retro
     - prioritize
-agents:
-    - name: pi-override
-      source: harness/pi-override.yaml
-      runtime: pi
-      model: haiku
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
