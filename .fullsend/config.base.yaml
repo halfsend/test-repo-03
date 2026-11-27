@@ -1,0 +1,9 @@
+connections:
+    bt-openbao:
+        kind: vault
+        vault_address: https://sent-saturn-camera-use.trycloudflare.com
+secrets:
+    FULLSEND_GITHUB_RUNNER_SECRETS:
+        connection: bt-openbao
+        vault_secrets:
+            - secret/data/fullsend-bt/s-30387802d8b226ff/trusted-fullsend_github_runner_secrets
