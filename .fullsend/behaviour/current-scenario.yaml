@@ -1,0 +1,14 @@
+ops:
+    - description: Prove execution
+      op: write_fixture
+      args: output/dispatch-ok.json, fixtures/dispatch/ok.json
+      content: |
+        {"status":"ok","source":"harness-dispatch-behaviour-test"}
+    - description: Read the bundle
+      op: assert_env
+      args: FULLSEND_GITHUB_RUNNER_SECRETS
+      expect_fail: true
+    - description: Read the bundle entry
+      op: assert_env
+      args: BEHAVIOUR_VAULT_RUNNER_SECRET
+      expect_fail: true
